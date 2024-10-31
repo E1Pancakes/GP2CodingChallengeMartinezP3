@@ -4,101 +4,215 @@ class Challenges
 {
     public static void Main(string[] args)
     {
+        var keepLoop = true;
 
-        Console.WriteLine("Welcome to my coding challenge program. There will be a varity of different functions you will \nhave to choose from. Please pick one.");
+        while (keepLoop)
+        {
+            Console.WriteLine("Welcome to my Coding Challenge program. There will be a variety of different functions you will have to choose from. Please pick one. (Provide a number. There are 8 challenges total currently.)");
 
-        Console.WriteLine("Today we are going to use the number adder function called SUM. Please input two numbers for us to add. \n");
+            var programChooser = Console.ReadLine();
+            int programChooserint = int.Parse(programChooser);
 
-        var number1 = Console.ReadLine();
-        int number1int = int.Parse(number1);
+            if (programChooserint == 1)
+            {
+                // Challenge 1 - Increment of 1
+                Console.WriteLine("Today we are gonna use the number adder function called Sum. Please input two numbers for us to add.\n");
 
-        Console.WriteLine("Awsome! Please input a 2nd number");
+                var number1 = Console.ReadLine();
+                int number1int = int.Parse(number1);
 
-        var number2 = Console.ReadLine();
-        int number2int = int.Parse(number2);
+                Console.WriteLine("Great! Type one more number.");
+
+                var number2 = Console.ReadLine();
+                int number2int = int.Parse(number2);
+
+                Sum(number1int, number2int);
+
+                Console.WriteLine("The sum of the number : " + number1 + " and the number: " + number2 + " is equal to: " + Sum(number1int, number2int));
+            }
+            if (programChooserint == 2)
+            {
+                //challenge 2 - minutes converter
+                Console.WriteLine("This program converts Minutes to Seconds. Please input Minutes.");
+
+                var minutesToConvert = Console.ReadLine();
+                int minutesToConvertint = int.Parse(minutesToConvert);
+
+                Convert(minutesToConvertint);
+
+                Console.WriteLine("In " + minutesToConvert + " amount of minutes, there are " + Convert(minutesToConvertint) + " amount of seconds.");
 
 
-        Console.WriteLine("The sum of the number: " + number1 + " and the number " + number2 + " is equal to:" + Sum(number1int, number2int));
-        Sum(number1int, number2int);
-        Console.WriteLine("Lets try converting minutes to seconds. \n. Give me a number to convert from minutes to seconds");
+            }
 
-        var number3 = Console.ReadLine();
-        int number3int = int.Parse(number3);
+            if (programChooserint == 3)
+            {
 
-        Console.WriteLine(number3 + " Minutes converted to seconds is: " + Convert(number3int) + " seconds ");
+                //challenge 3 - increment counter
+                Console.WriteLine("Provide a number.");
 
-        Console.WriteLine("Now try adding one to any number. \n. Give me a number to add one to.");
-        var number4 = Console.ReadLine();
-        int number4int = int.Parse(number4);
+                var challenge2Number = Console.ReadLine();
+                int challenge2Numberint = int.Parse(challenge2Number);
 
-        Console.WriteLine(number4 + "The sum of your number plus one iss equal to : " + PlusOne(number4int) + " ");
+                Console.WriteLine("The given number " + challenge2Number + " with an increment of 1 is " + PlusOne(challenge2Numberint));
 
-        Console.WriteLine("Now lets's Convert Voltage and Curent into Power. Please input one Voltage and One Current for us to convert to power. \n");
-        
-        var number5 = Console.ReadLine();
-        int number5int = int.Parse(number5);
+            }
 
-        Console.WriteLine("Great! Please input a Current");
-        var number6 = Console.ReadLine();
-        int number6int = int.Parse(number6);
+            if (programChooserint == 4)
+            {
 
-        Console.WriteLine("The total power of your voltage and your curent is equal to power: " + Circuit(number5int, number6int));
-        Circuit (number5int, number6int);
+                //Challenge 4 - what is the power of a voltage * current ?
+                Console.WriteLine("Provide a voltage.");
 
-        Console.WriteLine("Now let's convert you age in years into days.\n please give me your age in years. ");
-        var number7 = Console.ReadLine();
-        int number7int = int.Parse(number7);
+                var Voltage = Console.ReadLine();
+                int Voltageint = int.Parse(Voltage);
 
-        Console.WriteLine(number7 + " Your age in days is:" + CalcAge(number7int) + " Days ");
+                Console.WriteLine("Now provide a current.");
 
-        Console.WriteLine(" Let's find the area of a triangle \n. please give me the basse of the triangle.");
-        var number8 = Console.ReadLine();
-        int number8int = int.Parse(number8);
+                var Current = Console.ReadLine();
+                int Currentint = int.Parse(Current);
 
-        Console.WriteLine("Amazing! Pleasse give me the hieght of the triangle");
-        var number9 = Console.ReadLine();
-        int number9int = int.Parse(number9);
+                Console.WriteLine("The power will be " + Multiplier(Currentint, Voltageint));
 
-        Console.WriteLine("The area of your triangle is: " + triArea(number8int, number9int));
+            }
 
-        Console.WriteLine("Now let's find out if a number is less than or equal to zero. \n. Please give me a number to find if it is less than or equal to zero ");
-        var number10 = Console.ReadLine();
-        int number10int = int.Parse(number10);
-        Console.WriteLine(lessThanOrEqualToZero(number10int));
+
+            if (programChooserint == 5)
+            {
+
+                //Challenge 5 - how many days old are you?
+                Console.WriteLine("Please provide an age to calculate.");
+
+                var Age = Console.ReadLine();
+                int Ageint = int.Parse(Age);
+
+                Console.WriteLine("Someone " + Age + " years old is " + CalcAge(Ageint) + " days old.");
+
+            }
+
+
+            if (programChooserint == 6)
+            {
+
+                //Challenge 6 - calculate a triangle's area
+
+                Console.WriteLine("Provide the base, then height to calculate the area of a triangle.");
+
+                var triBase = Console.ReadLine();
+                int triBaseint = int.Parse(triBase);
+
+                Console.WriteLine("Great! now provide the height.");
+
+                var triHeight = Console.ReadLine();
+                int triHeightint = int.Parse(triHeight);
+
+                Console.WriteLine("The area of a triangle with a base of " + triBase + " and height of " + triHeight + " is " + triArea(triBaseint, triHeightint));
+
+            }
+
+
+            if (programChooserint == 7)
+            {
+
+                //Challenge 7 - Is a number equal to or less than 0?
+
+                Console.WriteLine("Please provide a number to check is equal or less than 0.");
+
+                var lessThanZero = Console.ReadLine();
+                int lessThanZeroint = int.Parse(lessThanZero);
+
+                Console.WriteLine("The number provided is equal to or less than 0: " + lessThanOrEqualToZero(lessThanZeroint));
+            }
+            
+            if (programChooserint == 8)
+            {
+                Console.WriteLine(" put two numbers that could sup up to 100");
+                var number11 = Console.ReadLine();
+                int int11int = int.Parse(number11);
+                var number12 = Console.ReadLine();
+                int int12int = int.Parse(number12);
+                Console.WriteLine(lessthanhundred(int11int, int12int));
+            }
+            if (programChooserint == 9)
+            {
+                Console.WriteLine(" Please give me integers that I can check if they are equal");
+                var number13 = Console.ReadLine();
+                int int13int = int.Parse(number13);
+                var number14 = Console.ReadLine();
+                int int14int = int.Parse(number14);
+                Console.WriteLine(equaltoo(int13int, int14int));
+            }
+            if (programChooserint == 10)
+            {
+                Console.WriteLine(" Please give me a a word and that word must contain SOMETHING \n. `");
+                var words10 = Console.ReadLine();
+                Console.WriteLine(GiveMeSomething(words10));
+            }
+            //for uhhhhh. failsafe?
+            //this should be fine i think
+            else
+            {
+                Console.WriteLine("----\n This program will repeat now. If you are done, close the window. \n ----");
+            }
+
+
+        }
+
     }
 
     public static int Sum(int number1, int number2)
-    { 
-        return number1 + number2; 
+    {
+        return number1 + number2;
     }
-
     public static int Convert(int number)
     {
         return number * 60;
     }
-
     public static int PlusOne(int number)
     {
         return number + 1;
     }
-
-    public static int Circuit(int number5, int number6)
+    public static int Multiplier(int number1, int number2)
     {
-        return number5 * number6;
+        return number1 * number2;
     }
-
     public static int CalcAge(int number)
     {
         return number * 365;
     }
-    
-    public static float triArea(float number8, int number9)
+
+    public static float triArea(float number1, int number2)
     {
-        return (number8 * number9) / 2;
+        return (number1 * number2) / 2;
     }
 
     public static bool lessThanOrEqualToZero(int number)
     {
         return number <= 0;
+    }
+
+    public static bool lessthanhundred(int number11, int number12)
+    {
+        if (number11 + number12 < 100)
+        {
+            return true;
+        }
+        return false;
+    }
+    public static bool equaltoo(int number13, int number14)
+    {
+        if (number13 == number14)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public static string GiveMeSomething(string words10)
+    {
+        var Smthn = " Something ";
+        return Smthn + words10;
     }
 }
