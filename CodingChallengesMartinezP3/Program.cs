@@ -148,11 +148,24 @@ class Challenges
                 var words10 = Console.ReadLine();
                 Console.WriteLine(GiveMeSomething(words10));
             }
+            if (programChooserint == 11)
+            {
+                Console.WriteLine(" Please give me the word true or false and I will reverse that word \n. ");
+                var TrueorFalse = Console.ReadLine();
+                if (TrueorFalse == "true")
+                {
+                    Console.WriteLine(" False");
+                }
+                else if (TrueorFalse == "false")
+                {
+                    Console.WriteLine(" True");
+                }
+            }
             //for uhhhhh. failsafe?
             //this should be fine i think
             else
             {
-                Console.WriteLine("----\n This program will repeat now. If you are done, close the window. \n ----");
+                Console.WriteLine("----\n This program will repeat now. If you are done, close the window. \n ----"); 
             }
 
 
