@@ -8,7 +8,7 @@ class Challenges
 
         while (keepLoop)
         {
-            Console.WriteLine("Welcome to my Coding Challenge program. There will be a variety of different functions you will have to choose from. Please pick one. (Provide a number. There are 8 challenges total currently.)");
+            Console.WriteLine("Welcome to my Coding Challenge program. There will be a variety of different functions you will have to choose from. Please pick one. (Provide a number. There are 13 challenges total currently.)");
 
             var programChooser = Console.ReadLine();
             int programChooserint = int.Parse(programChooser);
@@ -161,6 +161,22 @@ class Challenges
                     Console.WriteLine(" True");
                 }
             }
+            if (programChooserint == 12)
+            {
+                Console.WriteLine("Give me a number in hours that I willl convert into seconds. ");
+                var number15 = Console.ReadLine();
+                int number15int = int.Parse(number15);
+
+                Console.WriteLine(HoursintoSeconds(number15int));
+            }
+            if (programChooserint == 13)
+            {
+                Console.WriteLine("Give me a number and it will give you the n-sided regular polygon. ");
+                var number16 = Console.ReadLine();
+                int number16int = int.Parse(number16);
+
+                Console.WriteLine(SumOfPolygon(number16int));
+            }
             //for uhhhhh. failsafe?
             //this should be fine i think
             else
@@ -227,5 +243,13 @@ class Challenges
     {
         var Smthn = " Something ";
         return Smthn + words10;
+    }
+    public static int HoursintoSeconds(int number15)
+    {
+        return (number15 * 60 * 60);
+    }
+    public static int SumOfPolygon(int number16)
+    {
+        return (number16 - 2)* 180;
     }
 }
