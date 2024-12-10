@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net.Security;
+using System.Security;
 
 class Challenges
 {
@@ -8,7 +10,7 @@ class Challenges
 
         while (keepLoop)
         {
-            Console.WriteLine("Welcome to my Coding Challenge program. There will be a variety of different functions you will have to choose from. Please pick one. (Provide a number. There are 13 challenges total currently.)");
+            Console.WriteLine("Welcome to my Coding Challenge program. There will be a variety of different functions you will have to choose from. Please pick one. (Provide a number. There are 17 challenges total currently.)");
 
             var programChooser = Console.ReadLine();
             int programChooserint = int.Parse(programChooser);
@@ -177,6 +179,70 @@ class Challenges
 
                 Console.WriteLine(SumOfPolygon(number16int));
             }
+            if (programChooserint == 14)
+            {
+                Console.WriteLine("Now let's add Edabit to the end of your own sentence. \n Please type out any sentence");
+                var number17 = Console.ReadLine();
+                Console.WriteLine(Edabit(number17));
+            }
+            if (programChooserint == 15)
+            {
+                Console.WriteLine("Give me two values using true and false ");
+                var a = Console.ReadLine();
+                bool abool = bool.Parse(a);
+                Console.WriteLine("Give me two values using true and false ");
+                var b = Console.ReadLine();
+                bool bbool = bool.Parse(b);
+                Console.WriteLine("And(" + a + ", " + b + ") -> " + TOrF(abool, bbool) + ".");
+            }
+            if (programChooserint == 16)
+            {
+                Console.WriteLine("Now we are going to count the score of a basketball game. \n.how many 3 pointers were scored.");
+                var number18 = Console.ReadLine();
+                int number18int = int.Parse(number18);
+                Console.WriteLine("How many 2 pointers were scored.");
+                var number19 = Console.ReadLine();
+                int number19int = int.Parse(number19);
+                Console.WriteLine("Point(" + number18 + "," + number19 + ")-->" + BasketBallScore(number18int, number19int));
+            }
+            if (programChooserint == 17)
+            {
+                Console.WriteLine("Now we are going to find the perimeter. \n. give me two numbers to find the perimeter.");
+                var number20 = Console.ReadLine();
+                int number20int = int.Parse(number20);
+                var number21 = Console.ReadLine();
+                int number21int = int.Parse(number21);
+                Console.WriteLine("Point(" + number20 + "," + number21 + ")-->" + FP(number20int, number21int));
+            }
+            if (programChooserint == 18)
+            {
+                Console.WriteLine("give me a word and hello will be added infront of that word.");
+                var words = Console.ReadLine();
+
+                Console.WriteLine(hello(words) + "!");
+            }
+            if (programChooserint == 19)
+            {
+                Console.WriteLine("Now we are going to find out how many limbs are in three diffrent animals. \n. We will combine the total ");
+                var number22 = Console.ReadLine();
+                int number22int = int.Parse(number22);
+                var number23 = Console.ReadLine();
+                int number23int = int.Parse(number23);
+                var number24 = Console.ReadLine();
+                int number24int = int.Parse(number24);
+                Console.WriteLine("animals(" + number22 + "," + number23 + "," + number24 + ")-->" + Farm(number22int, number23int, number24int));
+            }
+            if (programChooserint == 20)
+            {
+                Console.WriteLine("Now we are going to find out how many wins, draws, and losses are in the Football game. \n. We will combine the total ");
+                var number25 = Console.ReadLine();
+                int number25int = int.Parse(number25);
+                var number26 = Console.ReadLine();
+                int number26int = int.Parse(number26);
+                var number27 = Console.ReadLine();
+                int number27int = int.Parse(number27);
+                Console.WriteLine("FootballPoints(" + number25 + "," + number26 + "," + number27 + ")-->" + Points(number25int, number26int, number27int));
+            }
             //for uhhhhh. failsafe?
             //this should be fine i think
             else
@@ -251,5 +317,44 @@ class Challenges
     public static int SumOfPolygon(int number16)
     {
         return (number16 - 2)* 180;
+    }
+    public static string Edabit(string number17)
+    {
+        var bit = "Edabit";
+        return number17 + bit;
+    }
+    public static bool TOrF(bool a, bool b)
+    {
+        if (a == true && b == true)
+        {
+            Console.WriteLine("True");
+            return true;
+        }
+        else
+        {
+            Console.WriteLine("False");
+            return false;
+        }
+    }
+    public static int BasketBallScore(int number18, int number19)
+    {
+        return (number18 * 3) + number19 * 2;
+    }
+    public static int FP(int number20, int number21)
+    {
+        return (number20 * 2) + number21 * 2;
+    }
+    public static string hello(string words)
+    {
+        var hello = " Hello ";
+        return hello + words;
+    }
+    public static int Farm(int number22, int number23, int number24)
+    {
+        return (number22 * 2 + number23 * 4 + number24 * 4);
+    }
+    public static int Points(int number25, int number26, int number27)
+    {
+        return (number25 * 3 + number26 * 1 + number27 * 0);
     }
 }
