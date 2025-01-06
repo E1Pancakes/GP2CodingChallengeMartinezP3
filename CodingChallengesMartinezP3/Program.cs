@@ -228,7 +228,7 @@ class Challenges
                 int number22int = int.Parse(number22);
                 var number23 = Console.ReadLine();
                 int number23int = int.Parse(number23);
-                var number24 = Console.ReadLine();
+                var number24 = Console.ReadLine();`
                 int number24int = int.Parse(number24);
                 Console.WriteLine("animals(" + number22 + "," + number23 + "," + number24 + ")-->" + Farm(number22int, number23int, number24int));
             }
@@ -242,6 +242,12 @@ class Challenges
                 var number27 = Console.ReadLine();
                 int number27int = int.Parse(number27);
                 Console.WriteLine("FootballPoints(" + number25 + "," + number26 + "," + number27 + ")-->" + Points(number25int, number26int, number27int));
+            }
+            if (programChooserint == 21)
+            {
+                Console.WriteLine("");
+                var number28 = Console.ReadLine();
+                int number28int = int.Parse(number28)
             }
             //for uhhhhh. failsafe?
             //this should be fine i think
@@ -356,5 +362,24 @@ class Challenges
     public static int Points(int number25, int number26, int number27)
     {
         return (number25 * 3 + number26 * 1 + number27 * 0);
+    }
+    public static string Month(int number28)
+    {
+        switch (number)
+        {
+            case 1: return "January";
+            case 2: return "Febuary";
+            case 3: return "March";
+            case 4: return "April";
+            case 5: return "May";
+            case 6: return "June";
+            case 7: return "July";
+            case 8: return "August";
+            case 9: return "September";
+            case 10: return "October";
+            case 11: return "November";
+            case 12: return "December";
+            default: return null; 
+        }
     }
 }
