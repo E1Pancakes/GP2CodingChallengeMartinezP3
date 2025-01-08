@@ -245,9 +245,65 @@ class Challenges
             }
             if (programChooserint == 21)
             {
-                Console.WriteLine("");
+                Console.WriteLine("")
                 var number28 = Console.ReadLine();
-                int number28int = int.Parse(number28)
+                int number28int = int.Parse(number28);
+                if (number28int = 0)
+                {
+                    Console.WriteLine("Invalid");
+                }
+                if (number28int = 1)
+                {
+                    Console.WriteLine("month name(1)--> January");
+                }
+                if (number28int = 2)
+                {
+                    Console.WriteLine("month name(2)--> Febuary");
+                }
+                if (number28int = 3)
+                {
+                    Console.WriteLine("month name(3)--> March");
+                }
+                if (number28int = 4)
+                {
+                    Console.WriteLine("month name(4)--> April");
+                }
+                if (number28int = 5)
+                {
+                    Console.WriteLine("month name(5)--> May");
+                }
+                if (number28int = 6)
+                {
+                    Console.WriteLine("month name(6)--> June");
+                }
+                if (number28int = 7)
+                {
+                    Console.WriteLine("month name(7)--> July");
+                }
+                if (number28int = 8)
+                {
+                    Console.WriteLine("month name(8)--> August");
+                }
+                if (number28int = 9)
+                {
+                    Console.WriteLine("month name(9)--> September");
+                }
+                if (number28int = 10)
+                {
+                    Console.WriteLine("month name(10)--> October");
+                }
+                if (number28int = 11)
+                {
+                    Console.WriteLine("month name(11)--> November");
+                }
+                if (number28int = 12)
+                {
+                    Console.WriteLine("month name(12)--> December");
+                }
+                else if (number28int = 13)
+                {
+                    Console.WriteLine("Invalid");
+                }
             }
             //for uhhhhh. failsafe?
             //this should be fine i think
@@ -362,24 +418,5 @@ class Challenges
     public static int Points(int number25, int number26, int number27)
     {
         return (number25 * 3 + number26 * 1 + number27 * 0);
-    }
-    public static string Month(int number28)
-    {
-        switch (number)
-        {
-            case 1: return "January";
-            case 2: return "Febuary";
-            case 3: return "March";
-            case 4: return "April";
-            case 5: return "May";
-            case 6: return "June";
-            case 7: return "July";
-            case 8: return "August";
-            case 9: return "September";
-            case 10: return "October";
-            case 11: return "November";
-            case 12: return "December";
-            default: return null; 
-        }
     }
 }
