@@ -10,7 +10,7 @@ class Challenges
 
         while (keepLoop)
         {
-            Console.WriteLine("Welcome to my Coding Challenge program. There will be a variety of different functions you will have to choose from. Please pick one. (Provide a number. There are 17 challenges total currently.)");
+            Console.WriteLine("Welcome to my Coding Challenge program. There will be a variety of different functions you will have to choose from. Please pick one. (Provide a number. There are 22 challenges total currently.)");
 
             var programChooser = Console.ReadLine();
             int programChooserint = int.Parse(programChooser);
@@ -40,9 +40,9 @@ class Challenges
                 var minutesToConvert = Console.ReadLine();
                 int minutesToConvertint = int.Parse(minutesToConvert);
 
-                Convert(minutesToConvertint);
+                Convertion(minutesToConvertint);
 
-                Console.WriteLine("In " + minutesToConvert + " amount of minutes, there are " + Convert(minutesToConvertint) + " amount of seconds.");
+                Console.WriteLine("In " + minutesToConvert + " amount of minutes, there are " + Convertion(minutesToConvertint) + " amount of seconds.");
 
 
             }
@@ -228,7 +228,7 @@ class Challenges
                 int number22int = int.Parse(number22);
                 var number23 = Console.ReadLine();
                 int number23int = int.Parse(number23);
-                var number24 = Console.ReadLine();`
+                var number24 = Console.ReadLine();
                 int number24int = int.Parse(number24);
                 Console.WriteLine("animals(" + number22 + "," + number23 + "," + number24 + ")-->" + Farm(number22int, number23int, number24int));
             }
@@ -245,65 +245,94 @@ class Challenges
             }
             if (programChooserint == 21)
             {
-                Console.WriteLine("")
+                Console.WriteLine("Now lets get the month of the year by th the month number.");
                 var number28 = Console.ReadLine();
                 int number28int = int.Parse(number28);
-                if (number28int = 0)
+                if (number28int == 0)
                 {
-                    Console.WriteLine("Invalid");
+                    Console.WriteLine("invalid");
                 }
-                if (number28int = 1)
+                if (number28int == 1)
                 {
-                    Console.WriteLine("month name(1)--> January");
+                    Console.WriteLine("month name(1)-> January");
                 }
-                if (number28int = 2)
+                if (number28int == 2)
                 {
-                    Console.WriteLine("month name(2)--> Febuary");
+                    Console.WriteLine("month name(2)-> Febuary");
                 }
-                if (number28int = 3)
+                if (number28int == 3)
                 {
-                    Console.WriteLine("month name(3)--> March");
+                    Console.WriteLine("month name(3)-> March");
                 }
-                if (number28int = 4)
+                if (number28int == 4)
                 {
-                    Console.WriteLine("month name(4)--> April");
+                    Console.WriteLine("month name(4)-> April");
                 }
-                if (number28int = 5)
+                if (number28int == 5)
                 {
-                    Console.WriteLine("month name(5)--> May");
+                    Console.WriteLine("month name(5)-> May");
                 }
-                if (number28int = 6)
+                if (number28int == 6)
                 {
-                    Console.WriteLine("month name(6)--> June");
+                    Console.WriteLine("month name(6)-> June");
                 }
-                if (number28int = 7)
+                if (number28int == 7)
                 {
-                    Console.WriteLine("month name(7)--> July");
+                    Console.WriteLine("month name(7)-> July");
                 }
-                if (number28int = 8)
+                if (number28int == 8)
                 {
-                    Console.WriteLine("month name(8)--> August");
+                    Console.WriteLine("month name(8)-> August");
                 }
-                if (number28int = 9)
+                if (number28int == 9)
                 {
-                    Console.WriteLine("month name(9)--> September");
+                    Console.WriteLine("month name(9)-> September");
                 }
-                if (number28int = 10)
+                if (number28int == 10)
                 {
-                    Console.WriteLine("month name(10)--> October");
+                    Console.WriteLine("month name(10)-> October");
                 }
-                if (number28int = 11)
+                if (number28int == 11)
                 {
-                    Console.WriteLine("month name(11)--> November");
+                    Console.WriteLine("month name(11)-> November");
                 }
-                if (number28int = 12)
+                if (number28int == 12)
                 {
-                    Console.WriteLine("month name(12)--> December");
+                    Console.WriteLine("month name(12)-> December");
                 }
-                else if (number28int = 13)
+                if (number28int == 13)
                 {
-                    Console.WriteLine("Invalid");
+                    Console.WriteLine("invalid");
                 }
+            }
+            if (programChooserint == 22)
+            {
+
+                int[] arr1 = new int[5];
+                int max, min;
+                Console.WriteLine("Enter Array Element");
+                for (int i = 0; i < 5; i++)
+                {
+                    Console.Write("Element {0} - ", i);
+                    arr1[i] = Convert.ToInt32(Console.ReadLine());
+                }
+                max = arr1[0];
+                min = arr1[0];
+
+                for (int i=0;i<arr1.Length;i++)
+                {
+                    if (arr1[i]>max)
+                    {
+                        max = arr1[i];
+                    }
+                    if (arr1[i]<min)
+                    {
+                        min = arr1[i];
+                    }
+                }
+                Console.WriteLine("Maximum number from an array is {0}", max);
+                Console.WriteLine("Minimum number from an array is {0}", min);
+
             }
             //for uhhhhh. failsafe?
             //this should be fine i think
@@ -321,7 +350,7 @@ class Challenges
     {
         return number1 + number2;
     }
-    public static int Convert(int number)
+    public static int Convertion(int number)
     {
         return number * 60;
     }
