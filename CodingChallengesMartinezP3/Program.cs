@@ -334,6 +334,33 @@ class Challenges
                 Console.WriteLine("Minimum number from an array is {0}", min);
 
             }
+            if (programChooser == 23)
+            {
+                int[] arr1 = new int[5];
+                int max, min;
+                Console.WriteLine("Enter Array Element");
+                for (int i = 0; i < 5; i++)
+                {
+                    Console.Write("Element {0} - ", i);
+                    arr1[i] = Convert.ToInt32(Console.ReadLine());
+                }
+                max = arr1[0];
+                min = arr1[0];
+
+                for (int i = 0; i < arr1.Length; i++)
+                {
+                    if (arr1[i] > max)
+                    {
+                        max = arr1[i];
+                    }
+                    if (arr1[i] < min)
+                    {
+                        min = arr1[i];
+                    }
+                }
+                Console.WriteLine("Maximum number from an array is {0}", max);
+                Console.WriteLine("Minimum number from an array is {0}", min);
+            }
             //for uhhhhh. failsafe?
             //this should be fine i think
             else
@@ -448,4 +475,5 @@ class Challenges
     {
         return (number25 * 3 + number26 * 1 + number27 * 0);
     }
+    
 }
