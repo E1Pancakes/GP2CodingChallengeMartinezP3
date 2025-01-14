@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Net.Security;
 using System.Security;
 
@@ -334,32 +335,23 @@ class Challenges
                 Console.WriteLine("Minimum number from an array is {0}", min);
 
             }
-            if (programChooser == 23)
+            if (programChooserint == 23)
             {
-                int[] arr1 = new int[5];
-                int max, min;
-                Console.WriteLine("Enter Array Element");
-                for (int i = 0; i < 5; i++)
-                {
-                    Console.Write("Element {0} - ", i);
-                    arr1[i] = Convert.ToInt32(Console.ReadLine());
-                }
-                max = arr1[0];
-                min = arr1[0];
+                int[] num = { 1, 2, 3, 4, 5 };
+                int sum = 0;
+                sum = num.Aggregate((a, b) => a + b);
+                Console.WriteLine(sum);
+            }
+            if (programChooserint == 24)
+            {
+                Console.WriteLine("sfd");
+                var number29 = Console.ReadLine();
+                int number29int = int.Parse(number29);
 
-                for (int i = 0; i < arr1.Length; i++)
-                {
-                    if (arr1[i] > max)
-                    {
-                        max = arr1[i];
-                    }
-                    if (arr1[i] < min)
-                    {
-                        min = arr1[i];
-                    }
-                }
-                Console.WriteLine("Maximum number from an array is {0}", max);
-                Console.WriteLine("Minimum number from an array is {0}", min);
+                var number30 = Console.ReadLine();
+                int number30int = int.Parse(number30);
+
+                Console.WriteLine("CalculateExponent(" + number29 + "," + number30 + ")-->" + CalculateExponent(number29int, number30int));
             }
             //for uhhhhh. failsafe?
             //this should be fine i think
@@ -475,5 +467,9 @@ class Challenges
     {
         return (number25 * 3 + number26 * 1 + number27 * 0);
     }
-    
+    public static double CalculateExponent(double number29, double number30)
+    {
+        return (Math.Pow(number29, number30));
+    }
+   
 }
