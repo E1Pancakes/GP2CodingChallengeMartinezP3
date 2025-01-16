@@ -11,7 +11,7 @@ class Challenges
 
         while (keepLoop)
         {
-            Console.WriteLine("Welcome to my Coding Challenge program. There will be a variety of different functions you will have to choose from. Please pick one. (Provide a number. There are 22 challenges total currently.)");
+            Console.WriteLine("Welcome to my Coding Challenge program. There will be a variety of different functions you will have to choose from. Please pick one. (Provide a number. There are 25 challenges total currently.)");
 
             var programChooser = Console.ReadLine();
             int programChooserint = int.Parse(programChooser);
@@ -337,10 +337,20 @@ class Challenges
             }
             if (programChooserint == 23)
             {
-                int[] num = { 1, 2, 3, 4, 5 };
-                int sum = 0;
-                sum = num.Aggregate((a, b) => a + b);
-                Console.WriteLine(sum);
+                Console.WriteLine("Now we are going to get the absolute value of four numbers.\n please inpute your first number.");
+                var number31 = Console.ReadLine();
+                int number31int = int.Parse(number31);
+                Console.WriteLine("Great, now give me your second number \n");
+                var number32 = Console.ReadLine();
+                int number32int = int.Parse(number32);
+                Console.WriteLine("Great, now give me your third number \n");
+                var number33 = Console.ReadLine();
+                int number33int = int.Parse(number33);
+                Console.WriteLine("Great, now give me your last number \n");
+                var number34 = Console.ReadLine();
+                int number34int = int.Parse(number34);
+                Console.WriteLine("getAbsSum([" + number31 + "," + number32 + "," + number32 + "," + number34 + "])->" + getAbsSum(number31int, number32int, number33int, number34int));
+
             }
             if (programChooserint == 24)
             {
@@ -490,6 +500,10 @@ class Challenges
     public static int Points(int number25, int number26, int number27)
     {
         return (number25 * 3 + number26 * 1 + number27 * 0);
+    }
+    public static int getAbsSum(int number31, int number32, int number33, int number34)
+    {
+        return (Math.Abs(number31)) + (Math.Abs(number33)) + (Math.Abs(number33)) + (Math.Abs(number34));
     }
     public static double CalculateExponent(double number29, double number30)
     {
