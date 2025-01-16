@@ -344,7 +344,7 @@ class Challenges
             }
             if (programChooserint == 24)
             {
-                Console.WriteLine("sfd");
+                Console.WriteLine("Give a number that will take that base number and multiply it by it's self with.\n the same number to the power.");
                 var number29 = Console.ReadLine();
                 int number29int = int.Parse(number29);
 
@@ -352,6 +352,30 @@ class Challenges
                 int number30int = int.Parse(number30);
 
                 Console.WriteLine("CalculateExponent(" + number29 + "," + number30 + ")-->" + CalculateExponent(number29int, number30int));
+            }
+            if (programChooserint == 25)
+            {
+                Console.WriteLine("Enter the numbers for the array, separated by spaces:");
+                string input = Console.ReadLine();
+
+                // Convert the input string into an array of integers
+                string[] inputArray = input.Split(' ');
+                int[] numbers = Array.ConvertAll(inputArray, int.Parse);
+
+                Console.WriteLine("Original array:");
+                foreach (var num in numbers)
+                {
+                    Console.Write(num + " ");
+                }
+
+                // Multiply each element by the length of the array
+                MultiplyByLength(numbers);
+
+                Console.WriteLine("\nArray after multiplicationn:");
+                foreach (var num in numbers)
+                {
+                    Console.Write(num + " \n");
+                }
             }
             //for uhhhhh. failsafe?
             //this should be fine i think
@@ -471,5 +495,14 @@ class Challenges
     {
         return (Math.Pow(number29, number30));
     }
-   
+    public static void MultiplyByLength(int[] array)
+    {
+        int length = array.Length;
+
+        for (int i = 0; i < length; i++)
+        {
+            array[i] *= length;
+        }
+    }
+
 }
