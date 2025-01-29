@@ -387,6 +387,44 @@ class Challenges
                     Console.Write(num + " \n");
                 }
             }
+            if (programChooserint == 26)
+            {
+                Console.WriteLine("Hamming Distance give me two");
+                var firstStrand = Console.ReadLine();
+
+
+                var SecondStrand = Console.ReadLine();
+
+
+                Console.WriteLine("HammingDistance(" + firstStrand + "," + SecondStrand + ")-->" + Distance(firstStrand, SecondStrand));
+            }
+            if (programChooserint == 27)
+            {
+                var number35 = Console.ReadLine();
+                var number36 = Console.ReadLine();
+
+                Console.WriteLine("NameShuffle(" + number35 + "," + number36 + ")-->" + Switch(number35, number36));
+            }
+            if (programChooserint == 28)
+            {
+                Console.WriteLine("");
+                var number37 = Console.ReadLine();
+                int number37int = int.Parse(number37);
+                Console.WriteLine("");
+                var number38 = Console.ReadLine();
+                int number38int = int.Parse(number38);
+                Console.WriteLine("");
+                Console.WriteLine("smallerNum(" + number37 + "," + number38 + ")-->" + smallerNum(number37int, number38int));
+            }
+            if (programChooserint == 29)
+            {
+                Console.WriteLine("Please provide a number to calculate its factorial.");
+
+                var factorialNumber = Console.ReadLine();
+                int factorialNumberInt = int.Parse(factorialNumber);
+
+                Console.WriteLine("The factorial of " + factorialNumber + " is " + Factorial(factorialNumberInt));
+            }
             //for uhhhhh. failsafe?
             //this should be fine i think
             else
@@ -517,6 +555,34 @@ class Challenges
         {
             array[i] *= length;
         }
+    }
+    public static int Distance(string firstStrand, string secondStrand)
+    {
+        if (firstStrand.Length != secondStrand.Length) { throw new ArgumentException(); }
+
+        return firstStrand.Zip(secondStrand, (abcde, bcdef) => abcde != bcdef).Count(f => f);
+    }
+    public static string Switch(string number35, string number36)
+    {
+        return number36 + " " + number35;
+    }
+    public static int smallerNum(int numfirst, int numsecond)
+    {
+        if (numfirst < numsecond)
+        {
+            return numfirst;
+        }
+        else
+        {
+            return numsecond;
+        }
+    }
+    public static int Factorial(int number)
+    {
+        if (number == 0)
+            return 1;  // Base case: 0! = 1
+        else
+            return number * Factorial(number - 1);  // Recursive case
     }
 
 }
