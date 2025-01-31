@@ -11,7 +11,7 @@ class Challenges
 
         while (keepLoop)
         {
-            Console.WriteLine("Welcome to my Coding Challenge program. There will be a variety of different functions you will have to choose from. Please pick one. (Provide a number. There are 25 challenges total currently.)");
+            Console.WriteLine("Welcome to my Coding Challenge program. There will be a variety of different functions you will have to choose from. Please pick one. (Provide a number. There are 30 challenges total currently.)");
 
             var programChooser = Console.ReadLine();
             int programChooserint = int.Parse(programChooser);
@@ -424,6 +424,26 @@ class Challenges
                 int factorialNumberInt = int.Parse(factorialNumber);
 
                 Console.WriteLine("The factorial of " + factorialNumber + " is " + Factorial(factorialNumberInt));
+            }
+            if (programChooserint == 30)
+            {
+                int total = 0;
+                // Build a list of vowels up front:
+                var vowels = new HashSet<char> { 'a', 'e', 'i', 'o', 'u' };
+
+                Console.WriteLine("Enter a Sentence");
+                string sentence = Console.ReadLine().ToLower();
+
+                for (int i = 0; i < sentence.Length; i++)
+                {
+                    if (vowels.Contains(sentence[i]))
+                    {
+                        total++;
+                    }
+                }
+                Console.WriteLine("CountVowels(" + sentence + ")------->" + total);
+
+                Console.ReadLine();
             }
             //for uhhhhh. failsafe?
             //this should be fine i think
